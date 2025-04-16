@@ -63,4 +63,3 @@ function toggleFavorite(movieId, button) {
 function heartIcon(isFav) {
     return isFav ? '❤️' : '🤍';
 }
-

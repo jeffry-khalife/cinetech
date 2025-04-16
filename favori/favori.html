@@ -17,24 +17,24 @@
 
         <div class="h-screen w-full bg-gray-700 relative flex overflow-hidden">
     
-            <!-- Sidebar -->
-            <aside class="h-full w-16 flex flex-col space-y-10 items-center justify-center relative bg-gray-800 text-white">
-              <!-- Profile -->
-              <div class="h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer hover:text-gray-800 hover:bg-white  hover:duration-300 hover:ease-linear focus:bg-white">
-              <img src="assets/images/film.png" alt=""></div>
-          
-              <!-- Courses -->
-              <div class="h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer hover:text-gray-800 hover:bg-white  hover:duration-300 hover:ease-linear focus:bg-white">
-                <img src="assets/images/serie.png" alt=""></div>
-          
-              <!-- Theme -->
-              <div class="h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer hover:text-gray-800 hover:bg-white  hover:duration-300 hover:ease-linear focus:bg-white">
-                <img src="assets/images/favoris.png" alt=""></div>
-          
-              <!-- Configuration -->
-              <div class="h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer hover:text-gray-800 hover:bg-white  hover:duration-300 hover:ease-linear focus:bg-white">
-                <img src="assets/images/recherche.png" alt=""></div>
-            </aside>
+        <!-- Sidebar -->
+      <aside class="h-full w-16 flex flex-col space-y-10 items-center justify-center relative bg-gray-800 text-white">
+        <!-- Profile -->
+        <div onclick="window.location.href='../film/index.html'" class="h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer hover:text-gray-800 hover:bg-white  hover:duration-300 hover:ease-linear focus:bg-white">
+        <img src="assets/images/film.png" alt="Film"></div>
+    
+        <!-- Courses -->
+        <div onclick="window.location.href='../serie/index.html'" class="h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer hover:text-gray-800 hover:bg-white  hover:duration-300 hover:ease-linear focus:bg-white">
+          <img  src="assets/images/serie.png" alt="Série"></div>
+    
+        <!-- Theme -->
+        <div onclick="window.location.href='../favori/favori.html'" class="h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer hover:text-gray-800 hover:bg-white  hover:duration-300 hover:ease-linear focus:bg-white">
+          <img  src="assets/images/favoris.png" alt="Favoris"></div>
+    
+        <!-- Configuration -->
+        <div onclick= "window.location.href='../accueil/accueil.html'"  class="h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer hover:text-gray-800 hover:bg-white  hover:duration-300 hover:ease-linear focus:bg-white">
+          <img src="assets/images/accueil.png" alt=""></div>
+      </aside>
 
     <section class="text-right">
         <input id="search-titre" list="titres-list" placeholder="Rechercher un titre..." class="w-80 p-2 mb-4 mt-3 border border-green-50"/>
@@ -44,7 +44,7 @@
 
 <!--FAVORIS-->
     <div id="favoris-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-    
+     
     <div id="modelConfirm" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4">
         <div class="relative top-10 mx-auto shadow-xl rounded-md bg-white max-w-md">
             <div class="flex justify-end p-2">
