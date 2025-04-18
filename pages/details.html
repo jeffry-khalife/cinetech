@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Détails du Film</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles/tailwind.css" />
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body class="bg-gray-900 text-white">
+  <div class="w-full h-full p-8">
+    <div id="movie-detail" class="flex justify-center items-center flex-col space-y-4">
+    </div>
+    <div id="comments-section" class="mt-8 bg-gray-800 p-4 rounded-lg">
+      <h2 class="text-2xl mb-4">Commentaires</h2>
+      <div id="comments-list" class="space-y-4">
+      </div>
+      <textarea id="comment-input" placeholder="Ajoutez un commentaire..." class="w-full p-2 rounded-lg bg-gray-700 text-white mb-4" rows="4"></textarea>
+      <button onclick="saveComment()" class="bg-blue-500 px-4 py-2 rounded-lg text-white">Ajouter un commentaire</button>
+    </div>
+    <div id="similar-movies-section" class="mt-8 bg-gray-800 p-4 rounded-lg">
+      <h2 class="text-2xl mb-4">Films Similaires</h2>
+      <div id="similar-movies-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      </div>
+    </div>
+    <div class="mt-8">
+      <a href="../pages/film.html" class="bg-gray-700 px-4 py-2 rounded-lg text-white inline-block">Retour à l'accueil</a>
+    </div>
+  </div>
+
+  <script src="../js/details.js"></script>
+</body>
+</html>
+
