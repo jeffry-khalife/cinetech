@@ -34,6 +34,12 @@
           </div>
         </div>
       </header>
+      <div class="text-right">
+        <input type="text" id="search-media" list="medias-list" placeholder="Recherchez un titre..." 
+               class="w-1/2 p-3 border border-gray-600 rounded-lg bg-gray-700 text-white">
+               <button id="search-button" class="text-sm text-white font-bold py-2 px-4 rounded mt-3 ml-2 mr-2 bg-grey-500 hover:bg-lime-400">Rechercher</button>
+        <datalist id="medias-list"></datalist>
+      </div>
       <h1 class="py-4 text-6xl font-extrabold bg-gradient-to-r from-blue-500 via-teal-500 to-pink-500 bg-clip-text text-transparent text-center">
         Serie
       </h1>
@@ -51,5 +57,7 @@
   </div>
 
   <script src="../js/serie.js"></script>
+  <script src="js/autocompletion.js"></script>
+
 </body>
 </html>
