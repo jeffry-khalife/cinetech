@@ -8,32 +8,37 @@ function fetchMedia(url, containerId) {
         .catch(error => console.error(`Erreur lors du chargement (${containerId}):`, error));
 }
 
-// Affichage sous forme de carrousel horizontal, avec 10 éléments visibles
 function displayMedia(mediaList, containerId) {
     const container = document.getElementById(containerId);
     container.innerHTML = '';
     container.style.display = 'flex';
-    container.style.overflowX = 'hidden';  // Masquer le débordement
+    container.style.overflowX = 'hidden';
     container.style.scrollBehavior = 'smooth';
 
     mediaList.forEach((media, index) => {
+        const mediaType = containerId.includes('series') ? 'tv' : 'movie';
         const mediaCard = document.createElement('div');
         mediaCard.className = `bg-gray-800 rounded shadow-md overflow-hidden min-w-[200px] transition-transform hover:scale-105 mx-2 ${
-            index >= 7 ? 'hidden' : ''  // Masquer les éléments après les 10 premiers
+            index >= 10 ? 'hidden' : ''
         }`;
 
-        mediaCard.innerHTML = `
+        const link = document.createElement('a');
+        link.href = `pages/details.html?movieId=${media.id}&mediaType=${mediaType}`;
+
+        link.innerHTML = `
             <img src="https://image.tmdb.org/t/p/w500${media.poster_path}" alt="${media.title || media.name}" class="w-full h-56 object-cover">
             <div class="p-2 text-center">
                 <h3 class="text-lg font-semibold">${media.title || media.name}</h3>
             </div>
         `;
 
+        mediaCard.appendChild(link);
         container.appendChild(mediaCard);
     });
 
     enableCarousel(containerId, mediaList.length);
 }
+
 
 // Défilement horizontal fluide avec limites
 function enableCarousel(containerId, totalItems) {
