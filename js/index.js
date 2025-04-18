@@ -19,7 +19,7 @@ function displayMedia(mediaList, containerId) {
     mediaList.forEach((media, index) => {
         const mediaCard = document.createElement('div');
         mediaCard.className = `bg-gray-800 rounded shadow-md overflow-hidden min-w-[200px] transition-transform hover:scale-105 mx-2 ${
-            index >= 10 ? 'hidden' : ''  // Masquer les éléments après les 10 premiers
+            index >= 7 ? 'hidden' : ''  // Masquer les éléments après les 10 premiers
         }`;
 
         mediaCard.innerHTML = `
