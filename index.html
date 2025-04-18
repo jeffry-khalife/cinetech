@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinetech - Accueil</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/tailwind.css">
+    <link rel="stylesheet" href="../accueil/style.css"> 
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="h-screen w-full bg-gray-700 relative flex overflow-hidden">
+
+        <!-- Sidebar -->
+        <aside class="h-full w-16 flex flex-col space-y-10 items-center justify-center relative bg-gray-800 text-white">
+          <div onclick="window.location.href='pages/film.html'"class="h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer hover:text-gray-800 hover:bg-white  hover:duration-300 hover:ease-linear focus:bg-white">
+          <img src="assets/images/film.png" alt=""></div>
+      
+          <div onclick="window.location.href='pages/serie.html'" class="h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer hover:text-gray-800 hover:bg-white  hover:duration-300 hover:ease-linear focus:bg-white">
+            <img src="assets/images/serie.png" alt=""></div>
+      
+          <div onclick="window.location.href='pages/favoris.html'" class="h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer hover:text-gray-800 hover:bg-white  hover:duration-300 hover:ease-linear focus:bg-white">
+            <img src="assets/images/favoris.png" alt=""></div>
+      
+          <div onclick= "window.location.href='index.html'"  class="h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer hover:text-gray-800 hover:bg-white  hover:duration-300 hover:ease-linear focus:bg-white">
+            <img src="assets/images/accueil.png" alt=""></div>
+        </aside>
+      
+        
+       
+        <div class="w-full h-full flex flex-col justify-between">
+          <header class="h-16 w-full flex items-center relative justify-end px-5 space-x-10 bg-gray-800">
+            <div class="flex flex-shrink-0 items-center space-x-4 text-white">
+                <div class="flex flex-col items-end ">
+                <div class="text-md font-medium ">Cinetech</div>
+              </div>
+              
+              <div class="h-10 w-10 rounded-full cursor-pointer bg-gray-200 border-2 border-blue-400"><img src="assets/images/popcorn.png" alt=""></div>
+            </div>
+          </header>
+
+            <main class="p-4 overflow-y-auto">
+              <div class="text-right">
+                <input type="text" id="search-media" list="medias-list" placeholder="Recherchez un titre..." 
+                       class="w-1/2 p-3 border border-gray-600 rounded-lg bg-gray-700 text-white">
+                       <button id="search-button" class="text-sm text-white font-bold py-2 px-4 rounded mt-3 ml-2 mr-2 bg-grey-500 hover:bg-lime-400">Rechercher</button>
+                <datalist id="medias-list"></datalist>
+              </div>
+
+                <h1 class="text-4xl font-bold text-center mb-6">Bienvenue sur Cinetech</h1>
+
+                <p class="text-lg text-center text-gray-400 mt-2 mb-8 max-w-2xl mx-auto">
+                    Cinetech est votre destination ultime pour explorer les derniers films et séries. 
+                    Découvrez les sorties récentes, plongez dans les classiques incontournables, et 
+                    laissez-vous guider par les tendances du moment. Installez-vous confortablement 
+                    et profitez du meilleur du cinéma et de la télévision !
+                 </p>                 
+
+                <!-- Section Dernières sorties - Films -->
+                <section class="mb-6">
+                    <h2 class="text-3xl font-bold text-center border-b-4 border-blue-500 mb-4">Dernières sorties - Films</h2>
+                    <div class="relative">
+                        <button id="prev-latest-films" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-500 px-4 py-2 rounded text-white">❮</button>
+                        <div id="latest-films-container" class="flex overflow-hidden space-x-4"></div>
+                        <button id="next-latest-films" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-500 px-4 py-2 rounded text-white">❯</button>
+                    </div>
+                </section>
+
+                <!-- Section Dernières sorties - Séries -->
+                <section class="mb-6">
+                    <h2 class="text-3xl font-bold text-center border-b-4 border-red-500 mb-4">Dernières sorties - Séries</h2>
+                    <div class="relative">
+                        <button id="prev-latest-series" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-red-500 px-4 py-2 rounded text-white">❮</button>
+                        <div id="latest-series-container" class="flex overflow-hidden space-x-4"></div>
+                        <button id="next-latest-series" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-red-500 px-4 py-2 rounded text-white">❯</button>
+                    </div>
+                </section>
+
+                <!-- Section Classiques incontournables -->
+                <section class="mb-6">
+                    <h2 class="text-3xl font-bold text-center border-b-4 border-yellow-500 mb-4">Classiques incontournables</h2>
+                    <div class="relative">
+                        <button id="prev-classic" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-yellow-500 px-4 py-2 rounded text-white">❮</button>
+                        <div id="classic-container" class="flex overflow-hidden space-x-4"></div>
+                        <button id="next-classic" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-yellow-500 px-4 py-2 rounded text-white">❯</button>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="js/autocompletion.js"></script>
+</body>
+</html>
